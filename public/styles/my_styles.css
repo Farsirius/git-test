@@ -1,0 +1,385 @@
+/* Мои стили  */
+
+/* Стили главного меню */
+
+/* скрываем выпадающие списки по умолчанию
+* и задаем абсолютное позиционирование */
+.sidebar_nav ul ul 
+{
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+
+
+			
+			/* отображаем выпадающий список при наведении */
+.sidebar_nav ul li:hover > ul 
+{
+	display:inherit;
+        position: relative;
+        left: 20%;
+        background-color: #1a1a1a;
+}
+			
+			/* первый уровень выпадающего списка */
+.sidebar_nav ul ul li 
+{
+	min-width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+li > a:after { content:  ' +'; }
+
+li > a:only-child:after { content: ''; }
+
+.top_nav
+{
+    font-size: 12px;
+}
+
+.top_nav ul li a
+{
+    font-size: 12px;
+}
+
+.top_nav ul ul
+{
+    display: none;
+    position: absolute;
+}
+
+.top_nav ul li:hover > ul 
+{
+	display:flex;
+        flex-direction: column;
+        top: 100%;
+        background-color: #1a1a1a;
+}
+
+.add_link
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.home_prod
+{
+	width: 100%;
+	height: 332px;
+}
+.home_prod_container
+{
+	position: absolute;
+	left: 0;
+	bottom: 98px;
+	width: 100%;
+}
+.home_prod_content
+{
+	padding-left: 160px;
+}
+.home_prod_title
+{
+	font-size: 72px;
+	font-weight: 300;
+	color: #414141;
+	line-height: 0.75;
+}
+.breadcrumbs
+{
+	margin-top: 20px;
+}
+.breadcrumbs ul li
+{
+	position: relative;
+}
+.breadcrumbs ul li:not(:last-child)::after
+{
+	display: inline-block;
+	content: '/';
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: 18px;
+	font-weight: 400;
+}
+.breadcrumbs ul li,
+.breadcrumbs ul li a
+{
+	font-size: 16px;
+	font-weight: 700;
+	color: #8f8f8f;
+}
+.breadcrumbs ul li a
+{
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.breadcrumbs ul li a:hover
+{
+	color: #414141;
+}
+
+
+
+/*********************************
+7. Product
+*********************************/
+
+.product_fview
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-bottom: 99px;
+}
+/* Sorting & Filtering */
+.products_bar
+{
+	width: 100%;
+	background: #f6f8fa;
+	z-index: 1;
+}
+.products_bar_content
+{
+	width: 100%;
+	height: 113px;
+}
+.product_categories ul li
+{
+	height: 38px;
+	background: transparent;
+	padding-left: 20px;
+	padding-right: 20px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.product_categories ul li:not(:last-child)
+{
+	margin-right: 12px;
+}
+.product_categories ul li:hover,
+.product_categories ul li.active
+{
+	background: #bbe432;
+}
+.product_categories ul li a
+{
+	font-size: 16px;
+	font-weight: 400;
+	color: #000000;
+	line-height: 38px;
+	white-space: nowrap;
+}
+.product_content_container
+{
+	padding-top: 87px;
+}
+.product_content
+{
+	width: 74%;
+	padding-right: 18px;
+}
+.product_image_row:not(:last-child)
+{
+	margin-bottom: 36px;
+}
+.product_image_1
+{
+	width: 54.48%;
+	padding-right: 18px;
+}
+.product_image_2
+{
+	width: 45.42%;
+	padding-left: 18px;
+}
+.product_image_4
+{
+	width: 45.61%;
+	padding-right: 25px;
+}
+.product_image_5
+{
+	width: 29.1%;
+	padding-left: 25px;
+}
+.product_image img
+{
+	max-width: 100%;
+}
+.product_sidebar
+{
+	width: 26%;
+	padding-left: 18px;
+}
+.product_form
+{
+	display: block;
+}
+.product_name
+{
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	color: #414141;
+	line-height: 1.2;
+}
+.product_price
+{
+	font-size: 24px;
+	font-weight: 700;
+	color: #414141;
+	margin-top: 13px;
+}
+.product_color
+{
+	font-size: 16px;
+	font-weight: 700;
+	color: #414141;
+	margin-top: 34px;
+}
+.product_color span
+{
+	color: #838383;
+}
+.product_size
+{
+	margin-top: 53px;
+}
+.product_size_title
+{
+	font-size: 16px;
+	font-weight: 700;
+	color: #414141;
+	line-height: 0.75;
+	padding-bottom: 21px;
+	border-bottom: solid 1px #b0b2b3;
+}
+.product_size_list
+{
+	padding-left: 28px;
+	margin-top: 38px;
+}
+.product_size_list ul li:not(:last-child)
+{
+	margin-bottom: 15px;
+}
+.product_size_list ul li.size_available
+{
+	cursor: pointer;
+}
+.product_size_list ul li a,
+.product_size_list ul li
+{
+	font-size: 14px;
+	font-weight: 700;
+	color: #bcbcbc;
+}
+.product_size_list ul li.size_available
+{
+	color: #414141;
+}
+.product_size_list ul li.size_available:hover,
+.regular_radio:checked + label
+{
+	color: #bbe432;
+}
+.regular_radio
+{
+    display: none;
+}
+.regular_radio + label
+{
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+.product_size_list ul li.size_available .regular_radio + label
+{
+	cursor: pointer;
+}
+.cart_button
+{
+	width: 100%;
+	height: 45px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #414141;
+	text-transform: uppercase;
+	background: #edf4f6;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin-top: 44px;
+}
+.cart_button:hover
+{
+	background: #414141;
+	color: #FFFFFF;
+}
+.similar_products_button
+{
+	width: 100%;
+	height: 45px;
+	text-align: center;
+	background: #414141;
+}
+.similar_products_button a
+{
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	color: #bbe432;
+	text-transform: uppercase;
+	line-height: 45px;
+	margin-top: 17px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.similar_products_button:hover
+{
+	background: #bbe432;
+}
+.similar_products_button:hover a
+{
+	color: #414141;
+}
+.product_links
+{
+	margin-top: 47px;
+}
+.product_links ul li:not(:last-child)
+{
+	margin-bottom: 8px;
+}
+.product_links ul li a
+{
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #414141;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.product_links ul li a:hover
+{
+	color: #bbe432;
+}
